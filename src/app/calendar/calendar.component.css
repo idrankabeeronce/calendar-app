@@ -1,0 +1,71 @@
+.form {
+    padding: 10px;
+    display: flex;
+    gap: 15px;
+}
+
+.form__calendar {
+    width: 300px;
+}
+
+.form__board,
+.form__calendar {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, .2);
+}
+
+.form_calendar_button {
+    margin-bottom: 15px;
+}
+
+.form__board {
+    flex: 1;
+    max-height: 500px;
+    max-width: 600px;
+    overflow: auto;
+}
+
+.form__board::-webkit-scrollbar {
+    width: 0;
+}
+
+.form__board_now-label {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background: #3f51b5;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+}
+
+.list-item__sub-items {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    height: 70px;
+}
+
+.list-item__sub-items_item {
+    position: relative;
+    background: #3f51b5;
+    border-radius: 5px;
+    color: white;
+    padding: 2px 10px;
+    cursor: pointer;
+}
+
+.item-desc {
+    position: absolute;
+    margin-top: 80px;
+}

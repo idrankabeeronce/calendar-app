@@ -1,0 +1,40 @@
+.background {
+    position: absolute;
+    z-index: 5;
+    background: rgba(0,0,0,.2);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.form {
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+}
+
+
+.form__header {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.form__desc,
+.form__date {
+    font-size: 18px;
+}
+
+.form__control,
+.form__date-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.form__date-new {
+    display: flex;
+    gap: 10px;
+}

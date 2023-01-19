@@ -1,0 +1,16 @@
+<p>
+    <mat-toolbar color="primary">
+        <mat-toolbar-row style="justify-content: space-between;">
+            <span>Calendar</span>
+            <mat-icon style="cursor: pointer;" (mouseover)="help(true)">help_outline</mat-icon>
+        </mat-toolbar-row>
+
+    </mat-toolbar>
+</p>
+<div *ngIf="openHelp" class="wrapper" (mouseover)="help(true)" (mouseleave)="help(false)">
+    <div class="modal-form">
+        <div class="modal-form__text">
+            <p>Here you can shedule some important events. <br> <br> If did something wrong, you always able to change date by drag and drop functionality or even delete it by selecting one.</p>
+        </div>
+    </div>
+</div>

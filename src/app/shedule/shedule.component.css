@@ -1,0 +1,30 @@
+.background {
+    position: absolute;
+    z-index: 5;
+    background: rgba(0,0,0,.2);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.form {
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+}
+.form__header {
+    font-size: 24px;
+    font-weight: bold;
+}
+.form__form-field {
+    display: grid;
+}
+.form__control {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between
+}

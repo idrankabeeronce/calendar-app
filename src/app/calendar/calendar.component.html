@@ -1,0 +1,37 @@
+<div class="form">
+    <div class="form__calendar">
+        <div class="form_calendar_button">
+            <button mat-raised-button color="primary" (click)="openSheduleForm()">Schedule an event</button>
+        </div>
+        <div class="form__calendar_card">
+            <mat-card>
+                <mat-calendar [(selected)]="selectedDate" (selectedChange)="onSelect($event)"></mat-calendar>
+            </mat-card>
+        </div>
+    </div>
+    <div class="form__board">
+
+        <div class="form__board_now-label">
+            {{selectedDate.getDate()}}
+        </div>
+        <mat-list cdkDropList 
+        [cdkDropListData]="listOfDailyActivities" (cdkDropListDropped)="dropItem($event)">
+            <ng-container *ngFor="let hour of hourList; let index = index">
+                <div class="list-item">
+                    <mat-list-item style="width: 70px">{{hour}}</mat-list-item>
+
+                    <div cdkDrag  [cdkDragData]="listOfDailyActivities[index]" class="list-item__sub-items">
+                        <ng-container  *ngFor="let activity of listOfDailyActivities[index]">
+                            <div class="list-item__sub-items_item"
+                                (click)="openActivityForm(activity)">{{activity.header}}</div>
+                        </ng-container>
+                    </div>
+                </div>
+                <mat-divider></mat-divider>
+            </ng-container>
+        </mat-list>
+    </div>
+</div>
+
+<app-shedule *ngIf="openSF" (newDataEvent)="addItem($event)"></app-shedule>
+<app-event *ngIf="openAF" [item]="currentItem" (changeDataEvent)="changeItem($event)"></app-event>

@@ -1,0 +1,36 @@
+<div class="background">
+  <div class="form">
+    <div class="form__header">Shedule an event</div>
+
+    <mat-divider></mat-divider>
+    <div class="form__form-field">
+      <mat-form-field appearance="fill">
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker" [(ngModel)]="data.date" [formControl]="dateForm">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Choose time</mat-label>
+        <input matInput type="time" [(ngModel)]="data.time" [formControl]="timeForm">
+        <mat-hint>hh:mm</mat-hint>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Header</mat-label>
+        <input matInput [(ngModel)]="data.header" [formControl]="headerForm">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Description of event</mat-label>
+        <input matInput [(ngModel)]="data.description" [formControl]="descriptionForm">
+      </mat-form-field>
+    </div>
+
+
+    <mat-divider></mat-divider>
+    <div class="form__control">
+      <button mat-button (click)="closeForm()">Cancel</button>
+      <button mat-button (click)="addNewItem()">Shedule</button>
+    </div>
+  </div>
+</div>
